@@ -1,12 +1,12 @@
 .cell {
   height: 4vh;
-  border: solid black 1px;
+  border: dotted black 1px;
   justify-content: center;
   text-align: center;
   align-items: center;
 }
 .stop {
-  font-size: 4vh;
+  border: solid black 1px;
 }
 .pawn {
   border: solid black 2px;

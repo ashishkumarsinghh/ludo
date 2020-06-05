@@ -5,7 +5,7 @@ export default function Dice(props) {
   const roll = () => {
     const num = Math.floor(Math.random() * 6) + 1;
     setstate(num);
-    //props.handleRoll(num);
+    props.play(num);
   };
   return (
     <div className="dice" onClick={roll}>

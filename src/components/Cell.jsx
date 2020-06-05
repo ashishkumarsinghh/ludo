@@ -12,20 +12,22 @@ export default function Cell(props) {
       }}
     >
       {props.pawn.map((item, idx) => {
-        if (idx >= 0 && idx <= 3 && item == props.cid)
+        if (idx >= 0 && idx <= 3 && item === props.cid)
           return <Pawn color="red" />;
-        else if (idx >= 4 && idx <= 7 && item == props.cid)
+        else if (idx >= 4 && idx <= 7 && item === props.cid)
           return <Pawn color="green" />;
-        else if (idx >= 8 && idx <= 11 && item == props.cid)
-          return <Pawn color="blue" />;
-        else if (idx >= 12 && idx <= 15 && item == props.cid)
+        else if (idx >= 8 && idx <= 11 && item === props.cid)
           return <Pawn color="yellow" />;
+        else if (idx >= 12 && idx <= 15 && item === props.cid)
+          return <Pawn color="blue" />;
+        else return "";
       })}
 
-      {(props.cid == 155 ||
-        props.cid == 41 ||
-        props.cid == 133 ||
-        props.cid == 247) && <span className="stop">X</span>}
+      {/* {(props.cid === 155 ||
+        props.cid === 41 ||
+        props.cid === 133 ||
+        props.cid === 247) && <span className="stop">X</span>} */}
+      {props.cid}
     </div>
   );
 }
