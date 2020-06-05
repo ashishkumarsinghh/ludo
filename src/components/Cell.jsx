@@ -1,12 +1,13 @@
 import React from "react";
+import Pawn from "./Pawn";
 
 export default function Cell(props) {
   return (
     <div
-      class="cell"
+      className="cell"
       style={{ backgroundColor: props.celltype.color, textAlign: "center" }}
     >
-      {props.cid}
+      {props.cid === props.pawn && <Pawn />} {props.cid}
     </div>
   );
 }

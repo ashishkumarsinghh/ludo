@@ -1,5 +1,15 @@
 .cell {
   height: 4vh;
+  border: solid black 1px;
+}
+.pawn {
+  border: solid black 2px;
+  height: 3vh;
+  width: 2vh;
+  border-radius: 50%;
+}
+.red {
+  background-color: red;
 }
 .App {
   display: grid;

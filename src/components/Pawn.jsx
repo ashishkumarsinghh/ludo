@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function Pawn(props) {
-  return <div></div>;
+export default function Pawn() {
+  return <div className="pawn red"></div>;
 }

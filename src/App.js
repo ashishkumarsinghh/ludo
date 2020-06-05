@@ -10,8 +10,19 @@ export default class App extends Component {
 
     this.state = {
       ids: [],
-      tracks: { greenTrack, yellowTrack, blueTrack, redTrack },
+      greenTrack,
+      yellowTrack,
+      blueTrack,
+      redTrack,
+      r1Pos: 120,
     };
+  }
+  move(color, id, by) {
+    let idx = this.state.redTrack.indexOf(this.state.r1Pos);
+
+    this.setState((prev) => {
+      return { ...prev, r1Pos: this.state.redTrack[idx + by] };
+    });
   }
   componentDidMount() {
     const ids = [];
@@ -27,8 +38,13 @@ export default class App extends Component {
       <div className="App">
         {this.state.ids.length > 0 &&
           this.state.ids.map((id) => (
-            <Cell cid={id} celltype={boardmap.get(id)} />
+            <Cell
+              cid={id}
+              celltype={boardmap.get(id)}
+              pawn={this.state.r1Pos}
+            />
           ))}
+        <button onClick={this.move.bind(this, "red", 0, 1)}>Move</button>
       </div>
     );
   }
