@@ -3,6 +3,7 @@ import Cell from "./components/Cell";
 import boardmap from "./boardmap";
 import { greenTrack, yellowTrack, blueTrack, redTrack } from "./playerTrack";
 import "./App.css";
+import Dice from "./components/Dice";
 
 export default class App extends Component {
   constructor(props) {
@@ -72,6 +73,7 @@ export default class App extends Component {
         >
           Move
         </button>
+        <Dice />
       </div>
     );
   }

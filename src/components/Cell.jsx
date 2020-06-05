@@ -22,7 +22,10 @@ export default function Cell(props) {
           return <Pawn color="yellow" />;
       })}
 
-      {props.cid}
+      {(props.cid == 155 ||
+        props.cid == 41 ||
+        props.cid == 133 ||
+        props.cid == 247) && <span className="stop">X</span>}
     </div>
   );
 }

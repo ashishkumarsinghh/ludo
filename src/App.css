@@ -5,6 +5,9 @@
   text-align: center;
   align-items: center;
 }
+.stop {
+  font-size: 4vh;
+}
 .pawn {
   border: solid black 2px;
   height: 3vh;
