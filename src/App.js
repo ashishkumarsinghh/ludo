@@ -14,10 +14,28 @@ export default class App extends Component {
       yellowTrack,
       blueTrack,
       redTrack,
-      r1Pos: 120,
+      positions: [
+        35,
+        38,
+        69,
+        72,
+        29,
+        32,
+        80,
+        83,
+        205,
+        208,
+        239,
+        242,
+        216,
+        219,
+        267,
+        270,
+      ],
     };
   }
   move(color, id, by) {
+    console.log("dice roll is : " + by);
     let idx = this.state.redTrack.indexOf(this.state.r1Pos);
 
     this.setState((prev) => {
@@ -41,10 +59,19 @@ export default class App extends Component {
             <Cell
               cid={id}
               celltype={boardmap.get(id)}
-              pawn={this.state.r1Pos}
+              pawn={this.state.positions}
             />
           ))}
-        <button onClick={this.move.bind(this, "red", 0, 1)}>Move</button>
+        <button
+          onClick={this.move.bind(
+            this,
+            "red",
+            0,
+            1 + Math.floor(Math.random() * 6)
+          )}
+        >
+          Move
+        </button>
       </div>
     );
   }
