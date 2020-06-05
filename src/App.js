@@ -11,6 +11,7 @@ export default class App extends Component {
 
     this.state = {
       ids: [],
+      turn: 0,
       greenTrack,
       yellowTrack,
       blueTrack,
@@ -35,6 +36,7 @@ export default class App extends Component {
       ],
     };
   }
+
   move(color, id, by) {
     console.log("dice roll is : " + by);
     let idx = this.state.redTrack.indexOf(this.state.r1Pos);
